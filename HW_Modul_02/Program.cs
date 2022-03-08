@@ -180,12 +180,41 @@ namespace HW_Modul_02
                 }
             }
 
-            for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
+            if (indexmini>indexmaxi)
             {
-                for (int j = 0; j < arr.Length / (arr.GetUpperBound(0) + 1); j++)
+                int buffer = indexmini;
+                indexmini = indexmaxi;
+                indexmaxi = buffer;
+                buffer = indexmaxj;
+                indexmaxj = indexminj;
+                indexminj = buffer;
+            }
+
+            if((indexmini == indexmaxi) && (indexminj>indexmaxj))
+            {
+                int buffer = indexmini;
+                indexmini = indexmaxi;
+                indexmaxi = buffer;
+                buffer = indexmaxj;
+                indexmaxj = indexminj;
+                indexminj = buffer;
+            }
+
+            for (int i = indexmini; i <= indexmaxi; i++)
+            {
+                if (i == indexmini)
                 {
-                    if (indexmini <= i && indexminj <= j && indexmaxi >= i && indexmaxj >= j) sum += arr[i, j];
+                    for (int j = indexminj+1; j < arr.Length / (arr.GetUpperBound(0) + 1); j++) sum += arr[i, j];
                 }
+                else if (indexmaxi != i)
+                {
+                    for (int j = 0; j < arr.Length / (arr.GetUpperBound(0) + 1); j++) sum += arr[i, j];
+                }
+                else if (indexmaxi == i) 
+                {
+                    for (int j = 0; j < indexmaxj; j++) sum += arr[i, j];
+                }
+   
             }
             Console.WriteLine($"Сумма элементов массива, расположенных между минимальным({min}) и максимальным({max}) элементами: {sum}");
         }
