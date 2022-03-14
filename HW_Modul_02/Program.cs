@@ -101,8 +101,10 @@ namespace HW_Modul_02
                 Console.WriteLine();
             }
 
-            double min = arr[1];
-            double max = arr[1];
+            int min1 = arr[0];
+            int max1 = arr[0];
+            double min2 = arr2[0,0];
+            double max2 = arr2[0,0];
             double sum = 0;
             int sum4et = 0;
             double sumne4et = 0;
@@ -110,8 +112,8 @@ namespace HW_Modul_02
 
             foreach (int i in arr)
             {
-                if (i < min) min = i;
-                if (i > max) max = i;
+                if (i < min1) min1 = i;
+                if (i > max1) max1 = i;
                 sum += i;
                 proz *= i;
                 if (i % 2 == 0) sum4et += i;
@@ -121,13 +123,15 @@ namespace HW_Modul_02
                 for (int j = 0; j < arr2.Length / (arr2.GetUpperBound(0) + 1); j++)
                 {
                     if ((j + 1) % 2 != 0) sumne4et += arr2[i, j];
-                    if (arr2[i, j] > max) max = arr2[i, j];
-                    if (arr2[i, j] < min) min = arr2[i, j];
+                    if (arr2[i, j] > max2) max2 = arr2[i, j];
+                    if (arr2[i, j] < min2) min2 = arr2[i, j];
                     sum += arr2[i, j];
                     proz *= arr2[i, j];
                 }
             }
-            Console.WriteLine($"Общий минимальный элемент:{min}\nОбщий максимальный элемент:{max}\nОбщая сумма элементов:{sum}\nОбщее произведение элементов:{proz}\nСумма четных элементов массива А:{sum4et}\nСумма нечетных столбцов массива В:{sumne4et}");
+            Console.WriteLine(min1 == min2 ? $"Общий минимальный элемент: {min1}" : $"Общего минимального элемента нет");
+            Console.WriteLine(max1 == max2 ? $"Общий максимальный элемент: {min1}" : $"Общего максимального элемента нет");
+            Console.WriteLine($"Общая сумма элементов:{sum}\nОбщее произведение элементов:{proz}\nСумма четных элементов массива А:{sum4et}\nСумма нечетных столбцов массива В:{sumne4et}");
 
         }
 
@@ -232,8 +236,8 @@ namespace HW_Modul_02
             Console.Write("Введите ключ: ");
             var secretKey = Convert.ToInt32(Console.ReadLine());
             var encryptedText = cipher.Encrypt(message, secretKey);
-            Console.WriteLine("Зашифрованное сообщение: {0}", encryptedText);
-            Console.WriteLine("Расшифрованное сообщение: {0}", cipher.Decrypt(encryptedText, secretKey));
+            Console.WriteLine($"Зашифрованное сообщение: {encryptedText}");
+            Console.WriteLine($"Расшифрованное сообщение: {cipher.Decrypt(encryptedText, secretKey)}");
             Console.ReadLine();
         }
 
@@ -381,7 +385,14 @@ namespace HW_Modul_02
         {
             Console.Clear();
             string s = $"To be, or not to be, that is the question,\nWhether 'tis nobler in the mind to suffer\nThe slings and arrows of outrageous fortune,\nOr to take arms against a sea of troubles,\nAnd by opposing end them? To die: to sleep;\nNo more; and by a sleep to say we end\nThe heart-ache and the thousand natural shocks\nThat flesh is heir to, 'tis a consummation\nDevoutly to be wish'd. To die, to sleep.";
-            s = s.Replace("die", "***");
+            Console.WriteLine($"Данн текст:\n{s}");
+            Console.Write("Введите недопустимое слово: ");
+            string clear = Console.ReadLine();
+            Console.Write("Введите на что будет заменены недопустимые слова: ");
+            string zamena = Console.ReadLine();
+            s = s.Replace(clear, zamena);
+            Console.WriteLine();
+            Console.WriteLine("Текст после заменны: ");
             Console.WriteLine(s);
         }
         static void Exit()
