@@ -202,7 +202,11 @@ namespace HW_Modul_02
 
             for (int i = indexmini; i <= indexmaxi; i++)
             {
-                if (i == indexmini)
+                if (indexmini == indexmaxi)
+                {
+                    for (int j = indexminj + 1; j < indexmaxj; j++) sum += arr[i, j];
+                }
+                else if (i == indexmini)
                 {
                     for (int j = indexminj+1; j < arr.Length / (arr.GetUpperBound(0) + 1); j++) sum += arr[i, j];
                 }
@@ -356,7 +360,7 @@ namespace HW_Modul_02
             string s = Console.ReadLine();
             s = s.ToLower();
             string res = "";
-            string[] res1 = s.Split(new char[] { '.' });
+            string[] res1 = s.Split(new char[] { '.','!','?' });
             foreach (string d in res1)
             {
                 char[] a = d.ToCharArray();

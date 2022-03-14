@@ -104,13 +104,13 @@ namespace homework
                 del = 100000;
                 for (int i = 0; i < 6; i++)
                 {
-                    if (i == raz1-1)
+                    if (i == raz1 - 1)
                     {
                         Console.Write(chislo2);
                         num = num % del;
                         del /= 10;
                     }
-                    else if (i == raz2-1)
+                    else if (i == raz2 - 1)
                     {
                         Console.Write(chislo1);
                         num = num % del;
@@ -129,254 +129,269 @@ namespace homework
         }
         static void Method5()
         {
-            int day_of_week = 6;
-            bool vusokosnuy = true;
-            bool day_of_month = true;
+            //int day_of_week = 6;
+            //bool vusokosnuy = true;
+            //bool day_of_month = true;
+            //Console.Clear();
+            //Console.WriteLine("Введите число: ");
+            //int day = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("Введите месяц: ");
+            //int month = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine("Введите год: ");
+            //int year = Int32.Parse(Console.ReadLine());
+            //bool dostup = true;
+
+            //if (day > 28 && month == 2)
+            //{
+            //    Console.WriteLine("Введена неправильная дата(в этом году в феврале 28 дней)");
+            //    dostup = false;
+            //}
+            //else if (day > 29 && month == 2 && year % 4 == 0)
+            //{
+            //    Console.WriteLine("Введена неправильная дата(в этом году в феврале 29 дней)");
+            //    dostup = false;
+            //}
+            //else if (day > 31)
+            //{
+            //    Console.WriteLine("Введена неправильная дата(В году не может быть больше 31 дня)");
+            //    dostup = false;
+            //}
+            //else if (day < 0)
+            //{
+            //    Console.WriteLine("Введена неправильная дата(В году не может быть меньше 1 дня)");
+            //    dostup = false;
+            //}
+            //else if (month > 12 || month < 1)
+            //{
+            //    Console.WriteLine("Введена неправильная дата(Месяц)");
+            //    dostup = false;
+            //}
+
+            //if (dostup)
+            //{
+
+            //    for (int i = 1922; i <= year; i++)
+            //    {
+
+            //        if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) vusokosnuy = true;
+            //        else vusokosnuy = false;
+
+            //        if (i != year)
+            //        {
+            //            for (int j = 1; j <= 12; j++)
+            //            {
+            //                if (j == 2 && vusokosnuy)
+            //                {
+            //                    for (int daym = 1; daym <= 29; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                    day_of_month = !day_of_month;
+            //                }
+            //                else if (j == 2 && !vusokosnuy)
+            //                {
+            //                    for (int daym = 1; daym <= 28; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                    day_of_month = !day_of_month;
+            //                }
+            //                else if (j == 12)
+            //                {
+            //                    for (int daym = 1; daym <= 31; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                    day_of_month = true;
+            //                }
+            //                else if (j == 7)
+            //                {
+            //                    for (int daym = 1; daym <= 31; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                }
+            //                else if (day_of_month)
+            //                {
+            //                    for (int daym = 1; daym <= 31; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                    day_of_month = !day_of_month;
+            //                }
+            //                else if (!day_of_month)
+            //                {
+            //                    for (int daym = 1; daym <= 30; daym++)
+            //                    {
+            //                        day_of_week++;
+            //                        if (day_of_week > 7) day_of_week = 1;
+            //                    }
+            //                    day_of_month = !day_of_month;
+            //                }
+
+            //            }
+            //        }
+            //        else if (i == year)
+            //        {
+            //            for (int j = 1; j <= month; j++)
+            //            {
+            //                if (j != month)
+            //                {
+            //                    if (j == 2 && vusokosnuy)
+            //                    {
+            //                        for (int daym = 1; daym <= 29; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (j == 2 && !vusokosnuy)
+            //                    {
+            //                        for (int daym = 1; daym <= 28; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (j == 12)
+            //                    {
+            //                        for (int daym = 1; daym <= 31; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = true;
+            //                    }
+            //                    else if (j == 7)
+            //                    {
+            //                        for (int daym = 1; daym <= 31; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                    }
+            //                    else if (!day_of_month)
+            //                    {
+            //                        for (int daym = 1; daym <= 30; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (day_of_month)
+            //                    {
+            //                        for (int daym = 1; daym <= 31; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                }
+            //                else if (j == month)
+            //                {
+            //                    if (j == 2 && vusokosnuy && day <= 29)
+            //                    {
+            //                        for (int daym = 1; daym <= day; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (j == 2 && !vusokosnuy && day <= 28)
+            //                    {
+            //                        for (int daym = 1; daym <= day; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (j == 12 && day <= 31)
+            //                    {
+            //                        for (int daym = 1; daym <= 31; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = true;
+            //                    }
+            //                    else if (j == 7 && day <= 31)
+            //                    {
+            //                        for (int daym = 1; daym <= 31; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                    }
+            //                    else if (day_of_month && day <= 31)
+            //                    {
+            //                        for (int daym = 1; daym <= day; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else if (!day_of_month && day <= 30)
+            //                    {
+            //                        for (int daym = 1; daym <= day; daym++)
+            //                        {
+            //                            day_of_week++;
+            //                            if (day_of_week > 7) day_of_week = 1;
+            //                        }
+            //                        day_of_month = !day_of_month;
+            //                    }
+            //                    else Console.WriteLine("Введена неправильная дата!(В месяце который вы указали меньше дней)");
+            //                }
+            //            }
+            //        }
+            //    }
+
+            //    string season = null;
+            //    string week = null;
+
+            //    if (month == 1 || month == 2 || month == 12) season = "Зима";
+            //    else if (month == 3 || month == 4 || month == 5) season = "Весна";
+            //    else if (month == 6 || month == 7 || month == 8) season = "Лето";
+            //    else if (month == 9 || month == 10 || month == 11) season = "Осень";
+
+            //    //day_of_week++;
+            //    //if (day_of_week > 7) day_of_week = 1;
+            //    if (day_of_week == 1) week = "Понедельник";
+            //    else if (day_of_week == 2) week = "Вторник";
+            //    else if (day_of_week == 3) week = "Среда";
+            //    else if (day_of_week == 4) week = "Четверг";
+            //    else if (day_of_week == 5) week = "Пятница";
+            //    else if (day_of_week == 6) week = "Суббота";
+            //    else if (day_of_week == 7) week = "Воскресенье";
+
+            //    Console.WriteLine($"День недели {week} сезон {season}");
+            //}
+
             Console.Clear();
-            Console.WriteLine("Введите число: ");
-            int day = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Введите месяц: ");
-            int month = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Введите год: ");
-            int year = Int32.Parse(Console.ReadLine());
-            bool dostup = true;
+            Console.Write("Введите дату: ");
+            string date = Console.ReadLine();
+            
+            int season = Int32.Parse(Convert.ToDateTime(date).Month.ToString());
 
-            if (day > 28 && month == 2)
-            {
-                Console.WriteLine("Введена неправильная дата(в этом году в феврале 28 дней)");
-                dostup = false;
-            }
-            else if (day > 29 && month == 2 && year % 4 == 0)
-            {
-                Console.WriteLine("Введена неправильная дата(в этом году в феврале 29 дней)");
-                dostup = false;
-            }
-            else if (day > 31)
-            {
-                Console.WriteLine("Введена неправильная дата(В году не может быть больше 31 дня)");
-                dostup = false;
-            }
-            else if (day < 0)
-            {
-                Console.WriteLine("Введена неправильная дата(В году не может быть меньше 1 дня)");
-                dostup = false;
-            }
-            else if (month > 12 || month < 1)
-            {
-                Console.WriteLine("Введена неправильная дата(Месяц)");
-                dostup = false;
-            }
+            if (season == 12 || season == 1 || season == 2) Console.WriteLine("Зима ");
+            else if (season == 3 || season == 4 || season == 5) Console.WriteLine("Весна ");
+            else if (season == 6 || season == 7 || season == 8) Console.WriteLine("Лето ");
+            else if (season == 9 || season == 10 || season == 11) Console.WriteLine("Осень ");
 
-            if (dostup)
-            {
+            string week = Convert.ToDateTime(date).DayOfWeek.ToString();
 
-                for (int i = 1922; i <= year; i++)
-                {
-
-                    if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) vusokosnuy = true;
-                    else vusokosnuy = false;
-
-                    if (i != year)
-                    {
-                        for (int j = 1; j <= 12; j++)
-                        {
-                            if (j == 2 && vusokosnuy)
-                            {
-                                for (int daym = 1; daym <= 29; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                                day_of_month = !day_of_month;
-                            }
-                            else if (j == 2 && !vusokosnuy)
-                            {
-                                for (int daym = 1; daym <= 28; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                                day_of_month = !day_of_month;
-                            }
-                            else if (j == 12)
-                            {
-                                for (int daym = 1; daym <= 31; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                                day_of_month = true;
-                            }
-                            else if (j == 7)
-                            {
-                                for (int daym = 1; daym <= 31; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                            }
-                            else if (day_of_month)
-                            {
-                                for (int daym = 1; daym <= 31; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                                day_of_month = !day_of_month;
-                            }
-                            else if (!day_of_month)
-                            {
-                                for (int daym = 1; daym <= 30; daym++)
-                                {
-                                    day_of_week++;
-                                    if (day_of_week > 7) day_of_week = 1;
-                                }
-                                day_of_month = !day_of_month;
-                            }
-
-                        }
-                    }
-                    else if (i == year)
-                    {
-                        for (int j = 1; j <= month; j++)
-                        {
-                            if (j != month)
-                            {
-                                if (j == 2 && vusokosnuy)
-                                {
-                                    for (int daym = 1; daym <= 29; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (j == 2 && !vusokosnuy)
-                                {
-                                    for (int daym = 1; daym <= 28; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (j == 12)
-                                {
-                                    for (int daym = 1; daym <= 31; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = true;
-                                }
-                                else if (j == 7)
-                                {
-                                    for (int daym = 1; daym <= 31; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                }
-                                else if (!day_of_month)
-                                {
-                                    for (int daym = 1; daym <= 30; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (day_of_month)
-                                {
-                                    for (int daym = 1; daym <= 31; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                            }
-                            else if (j == month)
-                            {
-                                if (j == 2 && vusokosnuy && day <= 29)
-                                {
-                                    for (int daym = 1; daym <= day; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (j == 2 && !vusokosnuy && day <= 28)
-                                {
-                                    for (int daym = 1; daym <= day; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (j == 12 && day <= 31)
-                                {
-                                    for (int daym = 1; daym <= 31; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = true;
-                                }
-                                else if (j == 7 && day <= 31)
-                                {
-                                    for (int daym = 1; daym <= 31; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                }
-                                else if (day_of_month && day <= 31)
-                                {
-                                    for (int daym = 1; daym <= day; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else if (!day_of_month && day <= 30)
-                                {
-                                    for (int daym = 1; daym <= day; daym++)
-                                    {
-                                        day_of_week++;
-                                        if (day_of_week > 7) day_of_week = 1;
-                                    }
-                                    day_of_month = !day_of_month;
-                                }
-                                else Console.WriteLine("Введена неправильная дата!(В месяце который вы указали меньше дней)");
-                            }
-                        }
-                    }
-                }
-
-                string season = null;
-                string week = null;
-
-                if (month == 1 || month == 2 || month == 12) season = "Зима";
-                else if (month == 3 || month == 4 || month == 5) season = "Весна";
-                else if (month == 6 || month == 7 || month == 8) season = "Лето";
-                else if (month == 9 || month == 10 || month == 11) season = "Осень";
-
-                //day_of_week++;
-                //if (day_of_week > 7) day_of_week = 1;
-                if (day_of_week == 1) week = "Понедельник";
-                else if (day_of_week == 2) week = "Вторник";
-                else if (day_of_week == 3) week = "Среда";
-                else if (day_of_week == 4) week = "Четверг";
-                else if (day_of_week == 5) week = "Пятница";
-                else if (day_of_week == 6) week = "Суббота";
-                else if (day_of_week == 7) week = "Воскресенье";
-
-                Console.WriteLine($"День недели {week} сезон {season}");
-            }
+            Console.WriteLine(week);
         }
         static void Method6()
         {
