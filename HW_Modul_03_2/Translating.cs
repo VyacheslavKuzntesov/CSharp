@@ -11,7 +11,6 @@ namespace HW_Modul_03_2
     {
         string[] Number ={"zero","one","two","three","four","five","six","seven",
         "eight","nine"};
-        int[] num = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         public Translating()
         {
             bool proverka = false;
@@ -23,7 +22,7 @@ namespace HW_Modul_03_2
             {
                 if (Number[i] == str)
                 {
-                    WriteLine($"{str} это {num[i]}");
+                    WriteLine($"{str} это {i}");
                     proverka = true;
                 }
             }
