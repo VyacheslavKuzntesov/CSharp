@@ -32,7 +32,7 @@ namespace HW_Modul_06
             teapot.Show();
             teapot.Desc();
 
-            Nuke nuke = new Nuke("Tefal", "134sa");
+            Microwave microwave = new Microwave("Tefal", "134sa");
             nuke.Sound();
             nuke.Show();
             nuke.Desc();
