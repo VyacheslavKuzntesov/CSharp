@@ -46,9 +46,9 @@ namespace HW_Modul_06
         }
     }
 
-    class Nuke : Device
+    class Microwave : Device
     {
-        public Nuke(string name, string har) : base(name, har)
+        public Microwave(string name, string har) : base(name, har)
         {
             Name = name;
             Specifications = har;
