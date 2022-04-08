@@ -42,7 +42,7 @@ namespace HW_Modul_06
             avto.Show();
             avto.Desc();
 
-            Steamboat steamboat = new Steamboat("Клермонт", "Первый пароход");
+            Boat boat = new Boat("Клермонт", "Первый пароход");
             steamboat.Sound();
             steamboat.Show();
             steamboat.Desc(); 

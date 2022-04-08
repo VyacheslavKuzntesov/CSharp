@@ -12,10 +12,10 @@ namespace HW_Modul_06
         protected string Name;
         protected string Specifications;
 
-        public Device(string name, string har)
+        public Device(string name, string specification)
         {
             Name = name;
-            Specifications = har;
+            Specifications = specification;
         }
 
         public override string ToString()
@@ -27,10 +27,10 @@ namespace HW_Modul_06
 
     class Teapot : Device
     {
-        public Teapot(string name, string har) : base(name, har)
+        public Teapot(string name, string specification) : base(name, specification)
         {
             Name = name;
-            Specifications = har;
+            Specifications = specification;
         }
         public void Sound()
         {
@@ -48,10 +48,10 @@ namespace HW_Modul_06
 
     class Microwave : Device
     {
-        public Microwave(string name, string har) : base(name, har)
+        public Microwave(string name, string specification) : base(name, specification)
         {
             Name = name;
-            Specifications = har;
+            Specifications = specification;
         }
         public void Sound()
         {
@@ -71,10 +71,10 @@ namespace HW_Modul_06
 
     class Avto : Device
     {
-        public Avto(string name, string har) : base(name, har)
+        public Avto(string name, string specification) : base(name, specification)
         {
             Name = name;
-            Specifications = har;
+            Specifications = specification;
         }
         public void Sound()
         {
@@ -92,12 +92,12 @@ namespace HW_Modul_06
         }
     }
 
-    class Steamboat : Device
+    class Boat : Device
     {
-        public Steamboat(string name, string har) : base(name, har)
+        public Boat(string name, string specification) : base(name, specification)
         {
             Name = name;
-            Specifications = har;
+            Specifications = specification;
         }
         public void Sound()
         {
